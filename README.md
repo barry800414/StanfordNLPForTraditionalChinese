@@ -18,4 +18,4 @@ Prerequisite
 
 ###For English tools:
 -------------------------------
-    maker eng_server port=xxxx
+    make eng_server port=xxxx
