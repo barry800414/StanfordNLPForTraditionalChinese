@@ -12,11 +12,25 @@ Prerequisite
 5. modify path to Java 1.8 in Makefile
 
 
-Usage
+Launch server
 ---------------------------------
 * Run server for Chinese:
     <code>make server port=xxxx</code>
 
 * Run server for English:
     <code>make eng_server port=xxxx</code>
+
+Usage
+---------------------------------
+### Word Segementer <br>
+* API url: <code>http://localhost:{$PORT}/segementer</code>
+
+### POS Tagger <br>
+* API url: <code>http://localhost:{$PORT}/pos</code>
+
+### Dependency Parser <br>
+* API url: <code>http://localhost:{$PORT}/pcfg_dep</code>
+
+### Constituent Parser
+* API url: <code>http://localhost:{$PORT}/pcfg</code>
 
