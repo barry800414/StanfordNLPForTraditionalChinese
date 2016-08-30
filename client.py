@@ -116,7 +116,7 @@ class Client():
 
 
 	def sendTagRequest(self, sentence, seg=False):
-		api_url = '%s/pos' % (api_url)
+		api_url = '%s/pos' % (self.api_url)
 		if seg == False:
 			payload = { 's': sentence }
 		else:
@@ -138,11 +138,23 @@ def lines2Const(lines):
     edgeLines = lines[1+nodesNum:]
     return (nodeLines, edgeLines)
 
-	
+
+### sample code 
+
+# initialize a client
 client = Client("http://140.112.31.187", 8011)
-	
+
+# segementor
+print(client.sendSegmentRequest("測試 我是一個句子"))
+
+# POS tagger 
+print(client.sendTagRequest("我是一個人"))
+
+# constituent parser
 print(client.sendConstParseRequest("軟體工程師"))
 
+# dependency parser
+print(client.sendDepParseRequest("這是一個測試用的句子"))
 
 #s = "I hate this product, so I don't want to buy it."
 #s = "我反對核四"
@@ -151,14 +163,8 @@ print(client.sendConstParseRequest("軟體工程師"))
 		
 #print(sendTagRequest("He has cars", seg=True))
 #print(sendTagRequest("It 's my fault , ! ; ? not your business .", seg=True))
-#print(sendTagRequest("我是一個人"))
 
-#print(sendSegmentRequest("測試 我是一個句子"))
 
-#print(sendDepParseRequest("He has cars", seg=True))
-#print(sendDepParseRequest("It 's my fault , not your business .", seg=True))
-#print(sendDepParseRequest("我是一個人", draw = True, fileFolder='test'))
-#print(sendDepParseRequest("這是一個測試用的句子"))
 #print(sendDepParseRequest("台灣應廢除死刑"))	
 
 #s = "I hate this product"
