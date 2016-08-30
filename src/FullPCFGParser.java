@@ -7,7 +7,7 @@ import edu.stanford.nlp.ling.Label;
 import edu.stanford.nlp.trees.*;
 import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
 
-import com.chaoticity.dependensee.*;
+import com.chaoticity.dependensee.Node;
 import jopencc.ZhtZhsConvertor;
 
 /*
@@ -279,12 +279,13 @@ public class FullPCFGParser extends PCFGParser{
     }
 	
 	//convert the words in list of nodes
+	/*
 	public ArrayList<Node> wordToZht(ArrayList<Node> nodes){
 		for(Node n : nodes){
 			n.word = convertor.convertToZht(n.word);
 		}
 		return nodes;
-	}
+	}*/
 
 	
 	
